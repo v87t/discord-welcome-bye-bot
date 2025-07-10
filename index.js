@@ -1,64 +1,4 @@
-# Discord Welcome/Bye Bot (v13)
-
-## Project Description
-
-This is a Discord bot that generates screenshots with a welcome or goodbye message (with the user's avatar and a custom background image) when a user joins or leaves the server. The bot uses the **Puppeteer** library to generate screenshots and sends them as embeds to the designated welcome or goodbye channel on the server.
-
-**Features:**
-- Generate screenshots with user avatars and personalized background.
-- Send welcome and goodbye messages to a designated channel.
-- Automatically delete the image file after sending the message.
-
-## Requirements
-
-- Node.js (v16.x or higher)
-- **discord.js** v13
-- **puppeteer** for screenshot generation
-- A Discord bot with appropriate permissions
-
-## Example Usage
-
-### Events:
-
-- **guildMemberAdd** – The bot sends a welcome message to the channel.
-- **guildMemberRemove** – The bot sends a goodbye message to the channel.
-
-Both messages include:
-- **User's avatar** in the generated image.
-- **Personalized text**: "Welcome" for new users and "Bye" for users leaving.
-
-### Generated Image Structure:
-
-The bot creates an image with a welcome or goodbye message where:
-- The **avatar** of the user is in the center.
-- The **user's name (nickname)** and message type ("Welcome" or "Bye") are displayed.
-
-### Example Message:
-
-The bot generates and sends a message to the channel with the following embed and image:
-
-**Welcome:**
-- `Welcome, [nickname] to our server!`
-
-**Goodbye:**
-- `Goodbye, [nickname]. We hope you return!`
-
----
-
-## Project Structure
-
-/discord-welcome-bye-bot
-│  
-├── /images # Folder storing temporary screenshot files  
-├── index.js # Main bot file  
-├── package.json # Project dependencies  
-└── README.md # Project documentation
-
----
-
-## `index.js` Code
-```javascript
-const { Client, Intents, MessageEmbed } = require('discord.js');
+const { Client, Intents, MessageActionRow, MessageButton, MessageEmbed } = require('discord.js');
 const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
@@ -73,6 +13,7 @@ const client = new Client({
 
 // ID to your welcome / bye - channel.
 const WELCOME_CHANNEL_ID = "";
+
 
 // Your BOT token.
 const TOKEN = "";
@@ -199,4 +140,3 @@ client.on('guildMemberRemove', async (member) => {
 });
 
 client.login(TOKEN);
-```

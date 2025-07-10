@@ -1,0 +1,31 @@
+{
+  "name": "discord-welcome-bye-bot",
+  "version": "1.0.0",
+  "description": "A Discord bot that generates custom welcome and goodbye messages with avatars and personalized backgrounds. The bot uses Puppeteer to create dynamic images and send them as embeds.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "welcome",
+    "bye",
+    "avatar",
+    "puppeteer"
+  ],
+  "author": "Kernel",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "@discordjs/builders": "^1.11.2",
+    "@discordjs/rest": "^2.5.1",
+    "axios": "^1.10.0",
+    "discord-api-types": "^0.38.15",
+    "discord.js": "^13.1.0",
+    "express": "^5.1.0",
+    "puppeteer": "^24.12.1",
+    "tcp-ping": "^0.1.1"
+  }
+}
