@@ -56,7 +56,7 @@ The bot generates and sends a message to the channel with the following embed an
 
 ---
 
-## `index.js (v13)` Code
+## `index.js (v13)` Code:
 ```javascript
 const { Client, Intents, MessageEmbed } = require('discord.js');
 const puppeteer = require('puppeteer');
@@ -201,7 +201,7 @@ client.on('guildMemberRemove', async (member) => {
 client.login(TOKEN);
 ```
 
-## `index.js (v14)` Code
+## `index.js (v14)` Code:
 ```javascript
 const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const puppeteer = require('puppeteer');
