@@ -1,4 +1,4 @@
-# Discord Welcome/Bye Bot (v13)
+# Discord Welcome/Bye Bot (v13 / v14)
 
 ## Project Description
 
