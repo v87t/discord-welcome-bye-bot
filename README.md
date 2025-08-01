@@ -84,7 +84,6 @@ You can use the following placeholders in your embed titles, descriptions, foote
 
 ## Channels Setup
 - Set the `"welcome"` and `"bye"` channel IDs in the config to the Discord channels where the bot should send welcome and goodbye messages respectively.
-- The bot does not support a shared channel for both events; keep them separate for now.
 
 ---
 
