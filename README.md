@@ -80,7 +80,6 @@ You can use the following placeholders in your embed titles, descriptions, foote
   - `!debug-join <userId>` — simulates a user join event for the specified user ID.
   - `!debug-leave <userId>` — simulates a user leave event for the specified user ID.
 - These commands only work for users with Administrator permissions on the server.
-- In debug mode, the bot sends the embed **without** the generated screenshot image for faster testing.
 
 ## Channels Setup
 - Set the `"welcome"` and `"bye"` channel IDs in the config to the Discord channels where the bot should send welcome and goodbye messages respectively.
