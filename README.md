@@ -56,6 +56,42 @@ The bot generates and sends a message to the channel with the following embed an
 
 ---
 
+# Configuration Guide for Welcome/Goodbye Bot
+
+## Background Image Size
+- The background image used for screenshots is recommended to be **1100x500 px** for best display results.
+- The current example image is exactly this size.
+- Changing this size or the image might require tweaking the CSS styles and testing to ensure the screenshot looks correct.
+
+## Available Template Variables
+You can use the following placeholders in your embed titles, descriptions, footers, and screenshot text fields. These will be dynamically replaced with actual data:
+
+| Variable      | Description                                      |
+|---------------|------------------------------------------------|
+| `[username]`  | Discord username (without tag).                  |
+| `[userId]`    | Discord user ID.                                 |
+| `[userTag]`   | Full Discord username with discriminator (e.g., User#1234). |
+| `[userMention]` | Mention of the user (`<@userId>`) that pings them in chat. |
+| `[guildName]` | Name of the Discord server.                      |
+| `[memberCount]` | Current number of members on the server.       |
+
+## Debug Mode
+- When `"debugMode"` is enabled (`true`), the bot listens for two special commands to test welcome/goodbye messages without real member events:
+  - `!debug-join <userId>` — simulates a user join event for the specified user ID.
+  - `!debug-leave <userId>` — simulates a user leave event for the specified user ID.
+- These commands only work for users with Administrator permissions on the server.
+- In debug mode, the bot sends the embed **without** the generated screenshot image for faster testing.
+
+## Channels Setup
+- Set the `"welcome"` and `"bye"` channel IDs in the config to the Discord channels where the bot should send welcome and goodbye messages respectively.
+- The bot does not support a shared channel for both events; keep them separate for now.
+
+---
+
+If you want to customize embeds or screenshot appearance, remember to update the config JSON accordingly and test changes carefully.
+
+---
+
 ## `index.js (v13)` Code:
 ```javascript
 const { Client, Intents, MessageEmbed } = require('discord.js');
