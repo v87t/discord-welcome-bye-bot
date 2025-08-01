@@ -1,0 +1,49 @@
+{
+  "botToken": "YOUR_BOT_TOKEN_HERE",
+
+  "debugMode": true,
+
+  "channels": {
+    "welcome": "WELCOME_CHANNEL_ID",
+    "bye": "BYE_CHANNEL_ID"
+  },
+
+  "embed": {
+    "welcome": {
+      "title": "Welcome to the server, [username]!",
+      "description": "We're glad you joined us, [username]! We now have [memberCount] members.",
+      "color": "#00FF00",
+      "footer": "Enjoy your stay on [guildName]!"
+    },
+    "bye": {
+      "title": "Goodbye, [username]!",
+      "description": "[userMention] has left the server [guildName]. We now have [memberCount] members.",
+      "color": "#FF0000",
+      "footer": "Good luck, [username]!"
+    }
+  },
+
+  "screenshot": {
+    "width": 1100,
+    "height": 500,
+    "backgroundImage": "https://i.imgur.com/CUAVXwI.png",
+    "fontFamily": "'Roboto', sans-serif",
+    "fontColor": "#FFFFFF",
+    "fontWeight": "700",
+    "messageFontSize": "46px",
+    "subMessageFontSize": "16px",
+    "avatarSize": 175,
+    "avatarBorderRadius": "50%"
+  },
+
+  "messages": {
+    "welcome": {
+      "main": "Welcome, [username]!",
+      "sub": "We are happy to welcome you! Enjoy your time with us."
+    },
+    "bye": {
+      "main": "Bye, [username]",
+      "sub": "It is a pity that you are leaving us. We hope you will come back someday."
+    }
+  }
+}
